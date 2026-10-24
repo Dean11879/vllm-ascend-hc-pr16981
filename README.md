@@ -1,3 +1,21 @@
+# Qwen3.8 HC AscendC adaptation — PR #16981
+
+本仓库专门保存 **Qwen3.8-Flash-Next 新 HC 算子适配**。
+
+- 原始 PR：[vllm-project/vllm-ascend#16981](https://github.com/vllm-project/vllm-ascend/pull/16981)。
+- PR 作者源仓库：`shaopeng-666/vllm-ascend`，分支 `feat/qwen38-flash-next-main-v1`。
+- 固定基线：`adc05909ea0125d058c2c9eb3131e761929f2551`，保留原提交历史。
+- 当前实现：**AscendC mix/inject + 修改后的 Triton combine**，依赖外部 TextGatedResidual 对齐修复包。
+- [适配说明、文件列表、验证与性能边界](docs/source/developer_guide/hc_ascendc_adaptation/README.md)。
+- [仅查看相对 PR 基线的适配差异](https://github.com/Dean11879/vllm-ascend-hc-pr16981/compare/hc-adapt/pr16981-base...feat/qwen38-hc-ascendc-adaptation)。
+
+这是从上述 PR 固定提交创建的独立源码仓库，非其他个人仓库的派生代码。
+测试代码与已交付 profiling 一致；当前不宣称完整模型数值等价或性能提升。
+
+---
+
+以下为原上游项目说明。
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vllm-project/vllm-ascend/main/docs/source/logos/vllm-ascend-logo-text-dark.png">

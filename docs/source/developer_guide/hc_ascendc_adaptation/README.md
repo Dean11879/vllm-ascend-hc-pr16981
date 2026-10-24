@@ -10,7 +10,7 @@
 - Ascend 固定基线：`adc05909ea0125d058c2c9eb3131e761929f2551`。
 - 配套 vLLM：`a98247ab4db686ee03c66d5feb3c761e52a2f8ab`。
 - 本分支直接从该 Ascend 提交创建；没有更新到当前 main，也没有混入旧实验分支的补零绕行。
-- `Dean11879/vllm-ascend` 是已有 fork；其 GitHub fork 父仓库可能与本次选定 PR 作者仓库不同。代码来源以上述固定提交为准。
+- 专用仓库：`Dean11879/vllm-ascend-hc-pr16981`。GitHub 对同一账号同一 fork 网络返回已有 fork，因此这里使用独立仓库承载原 PR 历史和适配分支；它没有其他个人仓库的 fork 父级。
 - 对比 `hc-adapt/pr16981-base...feat/qwen38-hc-ascendc-adaptation`，即可只看本次新增适配及说明。
 
 ## 修改文件与计算边界
